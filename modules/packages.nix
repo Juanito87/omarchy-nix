@@ -42,21 +42,23 @@ let
     fastfetch
 
     # GUIs
-    chromium
-    obsidian
+    google-chrome
+    slack
+    discord
+    spotify
     vlc
-    signal-desktop
 
     # Development tools
-    github-desktop
     gh
+    wget
+    curl
+    magic-wormhole
+    tailscale # vpn
 
     # Containers
     docker-compose
     ffmpeg
   ] ++ lib.optionals (pkgs.system == "x86_64-linux") [
-    typora
-    dropbox
     spotify
   ];
 

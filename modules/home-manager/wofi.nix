@@ -7,7 +7,7 @@
     ".config/wofi/style.css" = {
       text = ''
         * {
-          font-family: 'CaskaydiaMono Nerd Font', monospace;
+          font-family: 'Firamono Nerd Font', monospace;
           font-size: 18px;
         }
 

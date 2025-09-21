@@ -32,7 +32,6 @@ in {
     (import ./git.nix)
     (import ./mako.nix)
     (import ./starship.nix)
-    (import ./vscode.nix)
     (import ./waybar.nix inputs)
     (import ./wofi.nix)
     (import ./zoxide.nix)

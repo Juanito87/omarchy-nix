@@ -61,7 +61,7 @@ in {
         text_align = "center";
         color = "rgb(211, 198, 170)";
         font_size = 24;
-        font_family = "CaskaydiaMono Nerd Font";
+        font_family = "FiraMono Nerd Font";
         position = "0, -100";
         halign = "center";
         valign = "center";
