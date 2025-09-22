@@ -16,6 +16,7 @@ let
   systemPackages = with pkgs; [
     git
     vim
+    neovim
     libnotify
     nautilus
     alejandra

@@ -41,7 +41,7 @@ in {
         outer_color = foregroundRgb; # #d3c6aa
         outline_thickness = 4;
 
-        font_family = "CaskaydiaMono Nerd Font";
+        font_family = "FiraMono Nerd Font";
         font_size = 32;
         font_color = foregroundRgb;
 

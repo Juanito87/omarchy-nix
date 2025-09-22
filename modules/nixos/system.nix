@@ -52,7 +52,7 @@ in {
       ];
     fontconfig = {
       defaultFonts = {
-        monospace = [ "FiraMonoNerdFontMono"  ];
+        monospace = [ "FiraMono Nerd Font Mono"  ];
         };
       };
 }
