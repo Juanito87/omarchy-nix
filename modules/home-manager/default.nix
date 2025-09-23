@@ -30,7 +30,6 @@ in {
     (import ./btop.nix)
     (import ./direnv.nix)
     (import ./git.nix)
-    (import ./nvim.nix inputs)
     (import ./mako.nix)
     (import ./starship.nix)
     (import ./waybar.nix inputs)
