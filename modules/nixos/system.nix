@@ -40,6 +40,7 @@ in {
   services.tailscale.useRoutingFeatures = "both"; # or "client", "server", "none"
 
   networking.wg-quick.interfaces.wg0.configFile = "/etc/nixos/files/wireguard/edu.conf";
+  {
   fonts.packages = with pkgs; [
       nerd-fonts.agave
       nerd-fonts.fira-mono
@@ -55,4 +56,5 @@ in {
         monospace = [ "FiraMono Nerd Font Mono"  ];
         };
       };
+  };
 }
