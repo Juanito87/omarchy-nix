@@ -38,12 +38,12 @@ lib: {
     };
     primary_font = lib.mkOption {
       type = lib.types.str;
-      default = "Liberation Sans 11";
+      default = "FiraMono Nerd Font 11";
     };
-    vscode_settings = lib.mkOption {
-      type = lib.types.attrs;
-      default = {};
-    };
+    # vscode_settings = lib.mkOption {
+    #   type = lib.types.attrs;
+    #   default = {};
+    # };
     monitors = lib.mkOption {
       type = lib.types.listOf lib.types.str;
       default = [];
