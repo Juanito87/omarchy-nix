@@ -4,6 +4,8 @@ Omarchy-nix (Omanix?) is an opinionated NixOS flake to help you get started as f
 
 __This isn't meant to be full feature parity with Omarchy and likely never will be, especially with how fast the feature development and funding has been for that project. Instead, think of this as more of a launch pad to get your own similar Nix config set up!__
 
+I've personally moved to using regular Arch Omarchy full-time for a number of reasons. I'm not actively working on this repo but if you'd like to contribute please send a PR :) 
+
 ## Quick Start
 
 To get started you'll first need to set up a fresh [NixOS](https://nixos.org/) install. Just download and create a bootable USB and you should be good to go.
