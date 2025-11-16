@@ -33,12 +33,17 @@ lib: {
           };
         };
       };
-      default = {};
+      default = { };
       description = "Theme overrides including wallpaper path for generated themes";
     };
     primary_font = lib.mkOption {
       type = lib.types.str;
       default = "FiraMono Nerd Font 11";
+      default = "Liberation Sans 11";
+    };
+    vscode_settings = lib.mkOption {
+      type = lib.types.attrs;
+      default = { };
     };
     # vscode_settings = lib.mkOption {
     #   type = lib.types.attrs;
@@ -46,7 +51,7 @@ lib: {
     # };
     monitors = lib.mkOption {
       type = lib.types.listOf lib.types.str;
-      default = [];
+      default = [ ];
     };
     scale = lib.mkOption {
       type = lib.types.int;
@@ -80,7 +85,7 @@ lib: {
     };
     exclude_packages = lib.mkOption {
       type = lib.types.listOf lib.types.package;
-      default = [];
+      default = [ ];
       description = "Packages to exclude from the default system packages";
     };
   };
