@@ -18,18 +18,28 @@ in
           x = 14;
           y = 14;
         };
-        opacity = 0.95;
+
         decorations = "none";
+
+        # NEW
+        dynamic_title = true;
+        opacity = 0.75;
+        startup_mode = "Windowed";
+        title = "Juanito's Alacritty";
       };
+
+      scrolling.history = 15000;
 
       font = {
+        size = 12.0;
+
         normal = {
           family = cfg.primary_font;
+          style = "Regular";
         };
-        size = 12;
       };
 
-      # ---- THEME: omarchy ----
+      # ------- CUSTOM COLORS -------
       colors = {
         primary = {
           background = "#${palette.base00}";
@@ -41,27 +51,32 @@ in
           text       = "#${palette.base00}";
         };
 
-        # Alacritty splits the palette into normal/bright instead of a 0–21 list
+        # NEW: vi-mode cursor
+        vi_mode_cursor = {
+          cursor = "CellForeground";
+          text   = "CellBackground";
+        };
+
         normal = {
-          black   = "#${palette.base00}"; # 0
-          red     = "#${palette.base08}"; # 1
-          green   = "#${palette.base0B}"; # 2
-          yellow  = "#${palette.base0A}"; # 3
-          blue    = "#${palette.base0D}"; # 4
-          magenta = "#${palette.base0E}"; # 5
-          cyan    = "#${palette.base0C}"; # 6
-          white   = "#${palette.base05}"; # 7
+          black   = "#${palette.base00}";
+          red     = "#${palette.base08}";
+          green   = "#${palette.base0B}";
+          yellow  = "#${palette.base0A}";
+          blue    = "#${palette.base0D}";
+          magenta = "#${palette.base0E}";
+          cyan    = "#${palette.base0C}";
+          white   = "#${palette.base05}";
         };
 
         bright = {
-          black   = "#${palette.base03}"; # 8
-          red     = "#${palette.base08}"; # 9
-          green   = "#${palette.base0B}"; # 10
-          yellow  = "#${palette.base0A}"; # 11
-          blue    = "#${palette.base0D}"; # 12
-          magenta = "#${palette.base0E}"; # 13
-          cyan    = "#${palette.base0C}"; # 14
-          white   = "#${palette.base07}"; # 15
+          black   = "#${palette.base03}";
+          red     = "#${palette.base08}";
+          green   = "#${palette.base0B}";
+          yellow  = "#${palette.base0A}";
+          blue    = "#${palette.base0D}";
+          magenta = "#${palette.base0E}";
+          cyan    = "#${palette.base0C}";
+          white   = "#${palette.base07}";
         };
 
         indexed_colors = [
@@ -73,14 +88,6 @@ in
           { index = 21; color = "#${palette.base06}"; }
         ];
       };
-
-      keyboard.bindings = [
-        {
-          key = "K";
-          mods = "Control";
-          action = "ResetTerminal";
-        }
-      ];
     };
   };
 }
