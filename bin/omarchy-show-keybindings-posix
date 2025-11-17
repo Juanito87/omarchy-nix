@@ -1,0 +1,42 @@
+#!/bin/sh
+# A script to display Hyprland keybindings defined in your configuration
+# using wofi for an interactive search menu, with POSIX-safe locking.
+
+USER_HYPRLAND_CONF="$HOME/.config/hypr/hyprland.conf"
+LOCKDIR="/tmp/.wofi.lock"
+
+# Try to create lock directory
+if mkdir "$LOCKDIR" 2>/dev/null; then
+    # Ensure lock is released on exit
+    trap 'rmdir "$LOCKDIR"' EXIT INT TERM
+else
+    echo "Another instance is already running." >&2
+    exit 1
+fi
+
+grep '^[[:space:]]*bind' "$USER_HYPRLAND_CONF" |
+awk -F, '
+{
+    # Strip trailing comments
+    sub(/#.*/, "")
+
+    # Remove "bind…" prefix
+    sub(/^[[:space:]]*bind[elm]*[[:space:]]*=[[:space:]]*/, "", $1)
+
+    # Key combo
+    key_combo = $1 " + " $2
+    gsub(/^[ \t]+|[ \t]+$/, "", key_combo)
+    gsub(/[ \t]+/, " ", key_combo)
+
+    # Command
+    action = ""
+    for (i = 3; i <= NF; i++) {
+        action = action $i (i < NF ? "," : "")
+    }
+    sub(/^[[:space:]]*exec[[:space:]]*,?[[:space:]]*/, "", action)
+    gsub(/^[ \t]+|[ \t]+$/, "", action)
+
+    if (key_combo != "" && action != "")
+        printf "%-35s → %s\n", key_combo, action
+}' |
+wofi -dmenu -i --width 50% --height 40% -p 'Hyprland Keybindings' -O alphabetical

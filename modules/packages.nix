@@ -20,6 +20,7 @@ let
   systemPackages = with pkgs; [
     git
     vim
+    neovim
     libnotify
     nautilus
     alejandra
@@ -47,25 +48,26 @@ let
       powertop
       fastfetch
 
-      # GUIs
-      chromium
-      obsidian
-      vlc
-      signal-desktop
+    # GUIs
+    google-chrome
+    slack
+    discord
+    spotify
+    vlc
 
-      # Development tools
-      github-desktop
-      gh
+    # Development tools
+    gh
+    wget
+    curl
+    magic-wormhole
+    tailscale # vpn
 
-      # Containers
-      docker-compose
-      ffmpeg
-    ]
-    ++ lib.optionals (pkgs.system == "x86_64-linux") [
-      typora
-      dropbox
-      spotify
-    ];
+    # Containers
+    docker-compose
+    ffmpeg
+  ] ++ lib.optionals (pkgs.system == "x86_64-linux") [
+    spotify
+  ];
 
   # Only allow excluding discretionary packages to prevent breaking the system
   filteredDiscretionaryPackages = lib.lists.subtractLists exclude_packages discretionaryPackages;
