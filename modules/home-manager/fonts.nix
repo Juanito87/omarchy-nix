@@ -5,7 +5,7 @@
     defaultFonts = {
       serif = ["Noto Serif"];
       sansSerif = ["Noto Sans"];
-      monospace = ["FiraMono Mono Nerd Font"];
+      monospace = ["FiraMono Nerd Font Mono "];
     };
   };
 }
