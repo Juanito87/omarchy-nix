@@ -86,6 +86,7 @@ in
         clock = {
           format = "{:%A %I:%M %p}";
           format-alt = "{:%d %B W%V %Y}";
+          timezone = "America/Argentina/Buenos_Aires";
           tooltip = false;
         };
         network = {
