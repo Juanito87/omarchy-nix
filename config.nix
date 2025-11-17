@@ -39,7 +39,6 @@ lib: {
     primary_font = lib.mkOption {
       type = lib.types.str;
       default = "FiraMono Nerd Font 11";
-      default = "Liberation Sans 11";
     };
     vscode_settings = lib.mkOption {
       type = lib.types.attrs;
