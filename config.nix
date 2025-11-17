@@ -38,7 +38,7 @@ lib: {
     };
     primary_font = lib.mkOption {
       type = lib.types.str;
-      default = "FiraMono Nerd Font 11";
+      default = "FiraMono Nerd Font Mono";
     };
     vscode_settings = lib.mkOption {
       type = lib.types.attrs;
