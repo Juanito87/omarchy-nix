@@ -37,6 +37,7 @@ in
     (import ./hyprpaper.nix)
     (import ./hypridle.nix)
     (import ./ghostty.nix)
+    (import ./alacritty.nix)
     (import ./btop.nix)
     (import ./direnv.nix)
     (import ./git.nix)

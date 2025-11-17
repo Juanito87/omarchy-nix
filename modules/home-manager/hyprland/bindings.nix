@@ -97,7 +97,7 @@ in
       "SUPER, PRINT, exec, hyprpicker -a"
 
       # Clipse
-      "CTRL SUPER, V, exec, ghostty --class clipse -e clipse"
+      "CTRL SUPER, V, exec, $terminal --class clipse -e clipse"
     ];
 
     bindm = [
