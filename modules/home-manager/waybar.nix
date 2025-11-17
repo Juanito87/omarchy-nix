@@ -84,7 +84,7 @@ in
           on-click = "$terminal -e btop";
         };
         clock = {
-          format = "{:%A %I:%M %p}";
+          format = "{:%A %d/%m %I:%M %p}";
           format-alt = "{:%d %B W%V %Y}";
           timezone = "America/Argentina/Buenos_Aires";
           tooltip = false;
