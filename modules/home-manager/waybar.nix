@@ -81,11 +81,12 @@ in
         cpu = {
           interval = 5;
           format = "󰍛";
-          on-click = "ghostty -e btop";
+          on-click = "$terminal -e btop";
         };
         clock = {
-          format = "{:%A %I:%M %p}";
+          format = "{:%A %d/%m %I:%M %p}";
           format-alt = "{:%d %B W%V %Y}";
+          timezone = "America/Argentina/Buenos_Aires";
           tooltip = false;
         };
         network = {
@@ -105,7 +106,7 @@ in
           tooltip-format-disconnected = "Disconnected";
           interval = 3;
           nospacing = 1;
-          on-click = "ghostty -e nmcli";
+          on-click = "$terminal -e nmcli";
         };
         battery = {
           interval = 5;

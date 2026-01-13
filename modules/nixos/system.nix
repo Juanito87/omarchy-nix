@@ -39,9 +39,10 @@ in
     networkmanager.enable = true;
   };
 
-  fonts.packages = with pkgs; [
-    noto-fonts
-    noto-fonts-color-emoji
-    nerd-fonts.caskaydia-mono
-  ];
+  # Enable the Tailscale service
+  services.tailscale.enable = true;
+  # (Optional) If you want to use routing features like subnet routers or exit nodes
+  services.tailscale.useRoutingFeatures = "both"; # or "client", "server", "none"
+
+  networking.wg-quick.interfaces.wg0.configFile = "/etc/nixos/files/wireguard/edu.conf";
 }
